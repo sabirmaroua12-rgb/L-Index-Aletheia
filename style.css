@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    background: #efefef;
+    color: #2f3b2f;
+    line-height: 1.4;
+}
+.header{
+    background: #ffffff;
+    text-align: center;
+    border-bottom:1px solid #ddd;
+}
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+.quote {
+    background-color: #b7bca8;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.quote-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.quote-mark {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-style: italic;
+    max-width: 320px;
+}
+
+.quote-author {
+    margin-top: 10px;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+}
+.search {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.search h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.search-wrapper {
+    background-color: #8f9b8a;
+    padding: 14px;
+    border-radius: 14px;
+}
+.search-input {
+    display: flex;
+    align-items: center;
+    background: #e5e5e5;
+    border-radius: 25px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+}
+
+.search-input .icon {
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+.search-input input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+}
+.tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    flex: 1;
+    padding: 8px;
+    border-radius: 16px;
+    border: none;
+    background: #d9d9d9;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    background: #c4c4c4;
+}
+
+.tag.active {
+    background: #2f3b2f;
+    color: #ffffff;
+}
+.explore {
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.explore h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+.card {
+    background: #a6b08f;
+    border-radius: 14px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.book-title {
+    font-size: 12px;
+    margin-top: 8px;
+    text-align: center;
+    color: #2f3b2f;
+}
+
+.cards p {
+    grid-column: span 3;
+    text-align: center;
+    color: #666;
+}
+@media (min-width: 768px) {
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .quote-text {
+        font-size: 22px;
+        max-width: 500px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+
+    .card img {
+        height: 180px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .cards {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
